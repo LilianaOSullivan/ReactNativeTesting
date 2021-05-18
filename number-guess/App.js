@@ -13,7 +13,6 @@ export default function App() {
 	const configureNewGame = () => {
 		setGuessAttempts(0);
 		setUserNumber(null);
-
 	};
 
 	const startGameHandler = (selectedNumber) => {
@@ -27,10 +26,17 @@ export default function App() {
 	let content = <StartGameScreen onStartGame={startGameHandler} />;
 
 	if (userNumber && guessAttempts <= 0) {
-		content = <GameScreen userChoice={userNumber} onGameOver={gameOverHandler}/>;
-	}
-	else if (guessAttempts > 0) {
-		content = <GameOverScreen attemptsNumber={guessAttempts} userNumber={userNumber} onRestart={configureNewGame}/>
+		content = (
+			<GameScreen userChoice={userNumber} onGameOver={gameOverHandler} />
+		);
+	} else if (guessAttempts > 0) {
+		content = (
+			<GameOverScreen
+				attemptsNumber={guessAttempts}
+				userNumber={userNumber}
+				onRestart={configureNewGame}
+			/>
+		);
 	}
 	return (
 		<View style={styles.screen}>
