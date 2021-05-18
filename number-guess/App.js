@@ -30,7 +30,7 @@ export default function App() {
 		content = <GameScreen userChoice={userNumber} onGameOver={gameOverHandler}/>;
 	}
 	else if (guessAttempts > 0) {
-		content = <GameOverScreen roundsNumber={guessAttempts} userNumber={userNumber} onRestart={configureNewGame}/>
+		content = <GameOverScreen attemptsNumber={guessAttempts} userNumber={userNumber} onRestart={configureNewGame}/>
 	}
 	return (
 		<View style={styles.screen}>

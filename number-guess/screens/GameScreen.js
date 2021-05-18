@@ -8,7 +8,7 @@ const generateRandomBetween = (min, max, exclude) => {
 	min = Math.ceil(min);
 	max = Math.floor(max);
 
-	const randomNumber = Math.floor(Math.random() * (max - min) + min);
+	const randomNumber = Math.floor(Math.random() * (max - min)) + min;
 	if (randomNumber === exclude) {
 		return generateRandomBetween(min, max, exclude);
 	} else {
@@ -36,7 +36,7 @@ const GameScreen = (props) => {
 	const nextGuessHandler = (direction) => {
 		if (
 			(direction === "LOWER" && currentGuess < props.userChoice) ||
-			(direction === "GREATER" && currentGuess > props.userChoice)
+			(direction === "HIGHER" && currentGuess > props.userChoice)
 		) {
 			Alert.alert("Don't lie!", "You know this is wrong....", [
 				{ text: "Sorry!", style: "cancel" },
