@@ -50,9 +50,9 @@ const styles = StyleSheet.create({
 		height: 200,
 		width: "100%",
 		backgroundColor: "#f5f5f5",
-        borderRadius:10,
-        overflow:'hidden',
-        marginVertical:10,
+		borderRadius: 10,
+		overflow: "hidden",
+		marginVertical: 10,
 	},
 	mealHeader: {
 		height: "85%",
@@ -60,8 +60,8 @@ const styles = StyleSheet.create({
 	mealDetail: {
 		paddingHorizontal: 10,
 		justifyContent: "space-between",
-        alignItems:'center',
-        height:'15%',
+		alignItems: "center",
+		height: "15%",
 	},
 	titleContainer: {
 		backgroundColor: "rgba(0,0,0,0.5)",
